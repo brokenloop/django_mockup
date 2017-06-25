@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
-    url(r'^([0-9]+)/([0-9]+)/$', views.input, name='input'),
+    url(r'^var/(?P<var>[\w-]+)/$', views.var_input, name='var_input'),
 ]

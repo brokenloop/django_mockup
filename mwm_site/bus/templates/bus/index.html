@@ -51,7 +51,7 @@
             <div class="col-sm-12">
                 <h2 class="subtitle top-buffer">Your bus will arrive in</h2>
                 <div class="jumbotron bus-time">
-                    <h1>1 Hour 20 Minutes</h1>
+                    <h1>{{ time_prediction }}</h1>
                 </div>
             </div>
         
@@ -59,21 +59,27 @@
         <!-- /.row -->
 
         
-
-        <div class="row top-buffer">
-            <div class="col-sm-3">
-                <input type="text" class="form-control transparent-input" placeholder="Route">
+        <form method='GET' action='/bus/'>
+            <div class="row top-buffer">
+                <div class="col-sm-3">
+                    <input type="text" class="form-control transparent-input" name="route" placeholder="Route">
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control transparent-input" name="time" placeholder="Time">
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control transparent-input" name="day" placeholder="Day">
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control transparent-input" name="weather" placeholder="Weather">
+                </div>
             </div>
-            <div class="col-sm-3">
-                <input type="text" class="form-control transparent-input" placeholder="Time">
+            <div class="row top-buffer">
+                <div class="col-sm-12">
+                    <input type="submit" value="Submit">
+                </div>
             </div>
-            <div class="col-sm-3">
-                <input type="text" class="form-control transparent-input" placeholder="Day">
-            </div>
-            <div class="col-sm-3">
-                <input type="text" class="form-control transparent-input" placeholder="Weather">
-            </div>
-        </div>
+        </form>
 
         
 
