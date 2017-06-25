@@ -58,28 +58,77 @@
         </div>
         <!-- /.row -->
 
-        
+
+
         <form method='GET' action='/bus/'>
             <div class="row top-buffer">
-                <div class="col-sm-3">
-                    <input type="text" class="form-control transparent-input" name="route" placeholder="Route">
-                </div>
-                <div class="col-sm-3">
-                    <input type="text" class="form-control transparent-input" name="time" placeholder="Time">
-                </div>
-                <div class="col-sm-3">
-                    <input type="text" class="form-control transparent-input" name="day" placeholder="Day">
-                </div>
-                <div class="col-sm-3">
-                    <input type="text" class="form-control transparent-input" name="weather" placeholder="Weather">
-                </div>
+               {% for key, value in form_selects.items %}
+                    <div class="col-sm-3">
+                        <label for="{{ key }}">Select your {{ key }}:</label>
+                        <select class="form-control" id="{{ key }}" name="{{ key }}">
+                            {% for option in value %}
+                                <option value="{{ option }}">{{ option }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                {% endfor %}
             </div>
+
             <div class="row top-buffer">
                 <div class="col-sm-12">
                     <input type="submit" value="Submit">
                 </div>
             </div>
         </form>
+
+        
+        <!--<form method='GET' action='/bus/'>-->
+            <!--<div class="row top-buffer">-->
+                <!--<div class="col-sm-3">-->
+                    <!--<label for="route">Select your route:</label>-->
+                    <!--<select class="form-control" id="route" name="route">-->
+                        <!--{% for option in route_options %}-->
+                            <!--<option value="1">{{ option }}</option>-->
+                        <!--{% endfor %}-->
+                    <!--</select>-->
+                <!--</div>-->
+                <!--<div class="col-sm-3">-->
+                    <!--<label for="hour">Select your hour:</label>-->
+                    <!--<select class="form-control" id="hour">-->
+                        <!--{% for option in hour_options %}-->
+                            <!--<option value="5">{{ option }}</option>-->
+                        <!--{% endfor %}-->
+                    <!--</select>-->
+                <!--</div>-->
+                <!--<div class="col-sm-3">-->
+                    <!--<label for="day">Select your day:</label>-->
+                    <!--<select class="form-control" id="day">-->
+                        <!--{% for option in day_options %}-->
+                            <!--<option>{{ option }}</option>-->
+                        <!--{% endfor %}-->
+                    <!--</select>-->
+                <!--</div>-->
+                <!--<div class="col-sm-3">-->
+                    <!--<label for="weather">Select your weather:</label>-->
+                    <!--<select class="form-control" id="weather">-->
+                        <!--{% for option in weather_options %}-->
+                            <!--<option>{{ option }}</option>-->
+                        <!--{% endfor %}-->
+                    <!--</select>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="row top-buffer">-->
+                <!--<div class="col-sm-12">-->
+                    <!--<input type="submit" value="Submit">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</form>-->
+
+        <!--<ul>-->
+            <!--{% for i in hour_options %}-->
+                <!--<li>{{ i }}</li>-->
+            <!--{% endfor %}-->
+        <!--</ul>-->
 
         
 

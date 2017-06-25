@@ -217,3 +217,8 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/macos,django,python,pycharm,windows
+
+
+
+# my own directory
+sklearn_models/
