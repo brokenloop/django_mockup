@@ -7,7 +7,7 @@
 *.pyc
 __pycache__/
 local_settings.py
-db.sqlite3
+mwm_site/db.sqlite3
 media
 
 ### macOS ###
@@ -222,3 +222,9 @@ $RECYCLE.BIN/
 
 # my own directory
 #sklearn_models/
+
+
+venv
+*.pyc
+staticfiles
+.env
